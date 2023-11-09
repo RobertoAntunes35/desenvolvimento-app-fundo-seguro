@@ -1,11 +1,13 @@
-// Classe responsável para exceptions do User
-class UserException extends Error {
+// Criando exception para a autenticação
+
+class AuthException extends Error {
     constructor(status, message) {
         super(message);
         this.status = status;
         this.message = message;
         this.name = this.constructor.name;
-        Error.captureStackTrace(this.constructor);
+        Error.captureStackTrace(this, this.constructor)
     }
 }
-export default UserException
+
+export default AuthException

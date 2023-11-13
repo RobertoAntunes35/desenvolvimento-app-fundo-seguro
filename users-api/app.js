@@ -1,7 +1,8 @@
 import express from 'express';
 
 import { connectMongoDB } from './src/config/db/dbMongoConfig.js';
-import { createInitialDateMongoDB } from './src/config/db/initialDate.js'
+import { createInitialDateDebtsMongoDB } from './src/config/db/initialDateDebts.js'
+import { createInitialDateCreditsMongoDB } from './src/config/db/initialDateCredits.js'
 import checkToken from './src/config/auth/checkToken.js';
 
 const app = express();
@@ -9,8 +10,8 @@ const env = process.env;
 const PORT = env.PORT || 8082;
 
 connectMongoDB();
-createInitialDateMongoDB();
-
+createInitialDateDebtsMongoDB()
+createInitialDateCreditsMongoDB()
 // Protegendo a Aplicacao
 app.use(checkToken)
 app.get("/api/status", async (req, res) => {

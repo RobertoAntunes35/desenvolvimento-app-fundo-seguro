@@ -1,12 +1,14 @@
 import mongoose from 'mongoose';
 
+
+
 const Schema = mongoose.Schema;
 const model = mongoose.model;
 
-const Debts = new Schema({
-    debts: {
-        type: Array,
-        required: true, 
+const Credits = new Schema({
+    credits: {
+        type: Array, 
+        required: true,
     },
     user: {
         type: Object,
@@ -26,4 +28,4 @@ const Debts = new Schema({
     },
 })
 
-export default model("Debts", Debts);
+export default model("Credits", Credits)

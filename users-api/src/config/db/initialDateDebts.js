@@ -1,6 +1,6 @@
 import Debts from "../../modules/sales/model/Debts.js";
 
-export async function createInitialDateMongoDB() {
+export async function createInitialDateDebtsMongoDB() {
     // Excluindo todos os dados, primeirament !
     await Debts.collection.drop()
 

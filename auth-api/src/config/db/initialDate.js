@@ -10,6 +10,7 @@ export async function createInitialDate() {
         let password = await bcrypt.hash('123456', 10)
         let data_nascimento = new Date()
         let data_registro = new Date()
+        
         console.log(password)
         await User.create({
             name: "Roberto Antunes",

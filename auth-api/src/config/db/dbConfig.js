@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize'
 
-const sequelize = new Sequelize('auth_api_db', 'postgres', '1234', {
+const sequelize = new Sequelize('auth_api', 'postgres', 'mon123', {
     host: 'localhost',
-    port: 5434,
+    port: 5432,
     dialect: 'postgres',
     quoteIdentifiers: false,
     define: {

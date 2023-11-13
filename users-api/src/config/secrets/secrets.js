@@ -7,5 +7,5 @@ export const API_SECRET = env.API_SECRET ? env.API_SECRET :
 "bW9uZGlzdHJpYnVpZG9yYQ==";
 
 export const RABBIT_MQ_URL = env.RABBIT_MQ_URL ? env.RABBIT_MQ_URL :
-"amqp://localhost:5672";
+"amqp://127.0.0.1:5672";
 

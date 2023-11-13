@@ -30,7 +30,7 @@ export async function createInitialDateDebtsMongoDB() {
             },
         ],
         user: {
-            id: 'rkepkaodko',
+            id: 'a55sd1a5d1',
             name: 'Roberto Antunes',
             email: 'robertoantunes@gmail.com',
             cpf_cnpj: '123.456.789-01',

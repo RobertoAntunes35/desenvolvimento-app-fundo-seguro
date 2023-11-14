@@ -1,0 +1,32 @@
+version: "3"
+services:
+  auth-db:
+    image: postgres:11
+    container_name: auth-db
+    restart: always
+    environment: 
+    - POSTGRES_DB=auth-db
+    - POSTGRES_USER=admin
+    - POSTGRES_PASSWORD=123456
+    ports: 
+    - 5432:5432
+
+  debts_credits-db:
+    image: tutum/mongodb
+    container_name: debts_credits
+    restart: always
+    environment: 
+    - MONGODB_USER=admin
+    - MONGODB_PASS=123456
+    - MONGODB_DATABASE=debts_credits
+    ports: 
+    - 27017:27017
+    - 28017:28017
+
+  sales_rabbit:
+        image: rabbitmq:3-management
+        container_name: sales_rabbit
+        ports: 
+        - 5672:5672
+        - 25676:25676
+        - 15672:15672

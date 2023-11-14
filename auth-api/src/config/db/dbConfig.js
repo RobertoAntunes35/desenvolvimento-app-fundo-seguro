@@ -1,5 +1,9 @@
 import Sequelize from 'sequelize'
 
+// DB LOCAL
+// const sequelize = new Sequelize('auth_api', 'postgres', 'mon123', {
+
+// DB EMPRESA
 const sequelize = new Sequelize('auth_api', 'postgres', 'mon123', {
     host: 'localhost',
     port: 5432,

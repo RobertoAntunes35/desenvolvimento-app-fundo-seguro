@@ -1,0 +1,18 @@
+# Auth-api
+docker run --name auth-db -p 5432:5432 -e POSTGRES_DB=auth-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123456 postgres:11
+
+# Debts and credits
+# docker run --name debts_credits-db -p 5433:5432 -e POSTGRES_DB=debts_credits-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=123456 postgres:11
+
+# MongoDB
+docker run --name debts_creditos-db -p 27017:27017 -p 28017:28017 -e MONGODB_USER="admin" -e MONGODB_DATABASE="debts_credits" -e MONGODB_PASS="123456" tutum/mongodb
+
+# Rabbitmq
+docker run --name sales_rabbit -p 5672:5672 -p 25676:25676 -p 15672:15672 rabbitmq:3-management
+
+docker image build -t auth-api .
+docker image build -t debts_credits-api .
+
+docker run --name auth-api -e PORT=8080 -p 8080:8080 auth-api
+
+docker run --name debts_credits-api -e PORT=8082 -p 8082:8082 debts_credits-api

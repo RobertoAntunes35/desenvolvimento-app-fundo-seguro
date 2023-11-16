@@ -74,7 +74,7 @@ class CreditsService {
             salesId: createCredits.id,
             products: createCredits.products
         }
-        sendMessageCreditsUpdadeQueue(message);
+        sendMessageCreditsUpdadeQueue(message.content.toString());
 
     }
 }

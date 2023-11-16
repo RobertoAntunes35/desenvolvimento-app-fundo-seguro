@@ -8,7 +8,7 @@ export async function createInitialDateCreditsMongoDB() {
             {
                 descricao: 'Pagamento Mensal',
                 valor: 1200.00,
-                periodicidade_entrada: 'SEMANAL',
+                periodicidade_pagamento: 'SEMANAL',
                 data_entrada: new Date(),
                 metodo_pagamento: 'DINHEIRO'
             }

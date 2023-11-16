@@ -21,6 +21,5 @@ export function listenToUserConfirmationQueue() {
                 noAck: true,
             })
         })
-        console.info("Queues and Topics were defined.")
     });
 }

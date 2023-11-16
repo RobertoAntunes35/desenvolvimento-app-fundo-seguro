@@ -6,6 +6,7 @@ export async function createInitialDateCreditsMongoDB() {
     await Credits.create({
         credits: [
             {
+                credits_id: 1002,
                 descricao: 'Pagamento Mensal',
                 valor: 1200.00,
                 periodicidade_pagamento: 'SEMANAL',

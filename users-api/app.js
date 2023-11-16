@@ -8,8 +8,6 @@ import checkToken from './src/config/auth/checkToken.js';
 
 import { sendMessageDebtsUpdateQueue, sendMessageCreditsUpdadeQueue } from "./src/modules/product/rabbitmq/ProductStockUpdate.js"
 
-
-
 const app = express();
 const env = process.env;
 const PORT = env.PORT || 8082;
